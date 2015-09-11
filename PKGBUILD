@@ -2,7 +2,7 @@
 # Contributor: Yamashita Ren <lemaitre.lotus@gmail.com>
 
 pkgname=dcadec-git
-pkgver=r207.2a9186e
+pkgver=20150605.2a9186e
 pkgrel=1
 pkgdesc='DTS Coherent Acoustics decoder with support for HD extensions'
 arch=('i686' 'x86_64')
@@ -16,9 +16,8 @@ source=('git://github.com/foo86/dcadec.git')
 md5sums=('SKIP')
 
 pkgver() {
-  cd dcadec
-
-  echo "r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+  cd "$srcdir/$_gitname"
+  git log -1 --date=short --format="%cd.%h" | tr -d '-'
 }
 
 build() {
