@@ -3,7 +3,7 @@
 
 _gitname=dcadec
 pkgname=dcadec-git
-pkgver=20160417.df18a5f
+pkgver=20160618.b93deed
 pkgrel=1
 pkgdesc='DTS Coherent Acoustics decoder with support for HD extensions'
 arch=('i686' 'x86_64')
